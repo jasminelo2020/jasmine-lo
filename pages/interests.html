@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jasmine lo</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-324SWH5JK3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-324SWH5JK3');
+    </script>
+</head>
+<body>
+    
+    <header-component></header-component>
+
+    <main>
+        <section id="interests">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="../images/fashion_card.jpg" alt="fashion card"></img>
+                    <h2>fashion</h2>
+                    <p>recent fashion inspo!</p>
+                </div>
+                <div class="card">
+                    <img src="../images/food_card.jpg" alt="food card">
+                    <h2>food</h2>
+                    <p>some stuff i've cooked (or eaten) recently!</p>
+                </div>
+                <div class="card">
+                    <img src="../images/friends_card.jpg" alt="friends card">
+                    <h2>friends</h2>
+                    <p>recent adventures!</p>
+                </div>
+              </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+
+    <script src="script.js"></script>
+</body>
+</html>
