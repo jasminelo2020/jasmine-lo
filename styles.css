@@ -82,11 +82,11 @@ section {
 }
 
 .card:first-child {
-    margin-left: 100px; /* Adjust the value as needed */
+    margin-left: 100px; /* left margin of all cards */
 }
   
 .card:last-child {
-    margin-right: 100px; /* Adjust the value as needed */
+    margin-right: 100px; /* right margin of all cards */
 }
   
 
