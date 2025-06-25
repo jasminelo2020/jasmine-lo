@@ -72,7 +72,7 @@ section {
     transition: transform 0.3s ease-in-out;
 }
   
-/* Style the image inside the card */
+/* style the image inside the card */
 .card img {
     width: 90%; /* width % of image wrt the card */
     height: auto; /* maintain image's aspect ratio */
@@ -93,3 +93,13 @@ section {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* RESUME PAGE */
+
+.cute-pdf-embed {
+    border: 2px solid #f7cee2; /*  border color */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    margin: 20px auto; /* center pdf */
+    display: block; /* ensure the margin works */
+  }
