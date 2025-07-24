@@ -94,6 +94,27 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 800px) {
+    /* styles for mobile devices */
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .card {
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    .card:first-child,
+    .card:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+}
+
 /* RESUME PAGE */
 
 .cute-pdf-embed {
