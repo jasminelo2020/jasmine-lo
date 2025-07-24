@@ -131,7 +131,7 @@ class Header extends HTMLElement {
             <h1 class="title"><a href="index.html">jasmine lo</a></h1>
             <nav class="nav-right">
                 <ul>
-                    <li><a href="index.html">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
                     <!-- <li><a href="about.html">about</a></li> -->
                     <li><a href="resume.html">resume</a></li>
                 </ul>
