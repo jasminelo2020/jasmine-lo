@@ -103,3 +103,37 @@ section {
     margin: 20px auto; /* center pdf */
     display: block; /* ensure the margin works */
   }
+
+/* PROJECTS PAGE */
+
+.projects {
+    display: flex;
+    gap: 30px;
+    margin: 30px 30px;
+}
+
+.project-text {
+    text-align: center;
+}
+
+.project-text p {
+    text-align: left;
+    margin: 0;
+}
+
+.project-text a {
+    text-align: left;
+}
+
+.project-text a img {
+    width: 30px;
+    height: auto;
+    /* display: flex;  */
+    /* justify-content: flex-start; */
+    float: left;
+    margin: 10px 10px;
+}
+
+.project-image {
+    width: 100%;
+}
