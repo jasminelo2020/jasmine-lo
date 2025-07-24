@@ -94,6 +94,10 @@ class Header extends HTMLElement {
                 margin: 0;
             }
 
+            .title-image {
+                display: none;
+            }
+
             .nav-right {
                 flex: 1;
                 justify-content: flex-end;
@@ -115,6 +119,27 @@ class Header extends HTMLElement {
                 color: #333;
                 text-decoration: none;
             }
+
+            @media only screen and (max-width: 600px) {
+                /* styles for mobile devices */
+                header {
+                    position: relative;
+                }
+                    
+                .title {
+                    display: none;
+                }
+
+                .title-image {
+                    display: block;
+                    text-align: center;
+                }
+
+                .title-image img {
+                    width: 30%;
+                }
+                
+            }
         </style>
         <header>
             <nav class="nav-left">
@@ -129,6 +154,7 @@ class Header extends HTMLElement {
                 </ul>
             </nav>
             <h1 class="title"><a href="index.html">jasmine lo</a></h1>
+            <h1 class="title-image"><a href="index.html"><img src="../images/website-icon.png"></a></h1>
             <nav class="nav-right">
                 <ul>
                     <li><a href="projects.html">projects</a></li>
