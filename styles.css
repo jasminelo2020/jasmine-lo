@@ -129,12 +129,15 @@ section {
 
 .projects {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     margin: 30px 30px;
+    /* height: 400px; */
 }
 
 .project-text {
     text-align: center;
+    width: 50%;
+    margin: 0px 10px;
 }
 
 .project-text p {
@@ -156,5 +159,25 @@ section {
 }
 
 .project-image {
-    width: 100%;
+    width: 50%;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    margin: 0px 10px;
+}
+
+.scroll-container {
+    background-color: #33333311;
+    border-radius: 10px;
+    width: 90%;
+    height: 400px;
+    overflow: auto;
+    object-fit: contain;
+    white-space: nowrap;
+    padding: 10px;
+}
+  
+.scroll-container img {
+    height: 90%;
+    padding: 10px;
 }
