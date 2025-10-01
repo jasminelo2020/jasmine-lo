@@ -164,15 +164,18 @@ section {
     justify-content: center;
     align-items: center; */
     margin: 0px 10px;
+    /* make this a flex container so we can vertically center the image */
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
 }
 
 .project-image img {
     width: 90%;
     object-fit: contain; /* this and above line fits image within the div */
     padding: 10px;
-    /* next two lines centers the image in the div */
-    display: block;
-    margin: auto;
+    /* parent (.project-image) is flex and handles vertical/horizontal centering */
+    max-width: 100%;
 }
 
 .scroll-container {
