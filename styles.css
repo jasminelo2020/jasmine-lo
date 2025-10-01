@@ -178,6 +178,55 @@ section {
     max-width: 100%;
 }
 
+@media only screen and (max-width: 800px) {
+    /* Stack projects vertically on small screens and make images scale to the container */
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .project-text,
+    .project-image {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .project-text {
+        text-align: left;
+    }
+
+    .project-image {
+        /* keep image centered inside its container */
+        justify-content: center;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        padding: 8px;
+        object-fit: contain;
+    }
+
+    /* adjust small icon alignment inside links */
+    .project-text a img {
+        float: none;
+        display: inline-block;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    /* force text to stack above images even if large-screen layout used row-reverse */
+    .projects .project-text {
+        order: 0;
+    }
+
+    .projects .project-image {
+        order: 1;
+    }
+}
+
 .scroll-container {
     background-color: #33333311;
     border-radius: 10px;
