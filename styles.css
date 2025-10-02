@@ -211,6 +211,10 @@ section {
         text-align: left;
     }
 
+     .project-text h3 {
+        text-align: center;
+    }
+
     .project-image {
         /* keep image centered inside its container */
         justify-content: center;
@@ -278,8 +282,9 @@ section {
     margin: 0;
 }
 
-.food-text a {
+.food-text ul {
     text-align: left;
+    margin: 0;
 }
 
 .food-text a img {
@@ -292,13 +297,58 @@ section {
 .food-image {
     width: 50%;
     margin: 0px 10px;
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
 }
 
 .food-image img {
     width: 90%;
     object-fit: contain; /* this and above line fits image within the div */
     padding: 10px;
-    /* next two lines centers the image in the div */
-    display: block;
-    margin: auto;
+     max-width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    /* stack food vertically on small screens and make images scale to the container */
+    .food {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .food-text,
+    .food-image {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .food-text {
+        text-align: left;
+    }
+
+    .food-text h3 {
+        text-align: center;
+    }
+
+    .food-image {
+        /* keep image centered inside its container */
+        justify-content: center;
+    }
+
+    .food-image img {
+        max-width: 600px;
+        height: auto;
+        padding: 8px;
+        object-fit: contain;
+    }
+
+    /* force text to stack above images even if large-screen layout used row-reverse */
+    .food .food-text {
+        order: 0;
+    }
+
+    .food .food-image {
+        order: 1;
+    }
 }
