@@ -303,10 +303,15 @@ section {
 }
 
 .food-image img {
-    width: 90%;
-    object-fit: contain; /* this and above line fits image within the div */
+    /* width: 90%; */
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 95%;
+    object-fit: contain; /* object-fit: + width: fits image within the div (but does not allow rounded image borders so we use auto width/height with max instead) */
     padding: 10px;
-     max-width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -336,13 +341,13 @@ section {
         justify-content: center;
     }
 
-    .food-image img {
+    /* .food-image img {
         max-width: 600px;
         height: auto;
         padding: 8px;
         object-fit: contain;
         border-radius: 20px;
-    }
+    } */
 
     /* force text to stack above images even if large-screen layout used row-reverse */
     .food .food-text {
