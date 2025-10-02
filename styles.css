@@ -304,6 +304,7 @@ section {
 
 .food-image img {
     /* width: 90%; */
+    /* below height/width settings allow image rounding with object-fit: contain by rounding image container; accounts for different aspect ratios */
     width: auto;
     height: auto;
     max-width: 100%;
@@ -361,6 +362,8 @@ section {
     .food .scroll-container img {
         height: auto;
         max-height: 380px;
+        /* above height settings allow rounding (below) for different size images */
+        /* worked by changing height: 100% to height: auto */
         width: auto;
         padding: 8px;
         object-fit: contain;
