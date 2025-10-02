@@ -341,6 +341,7 @@ section {
         height: auto;
         padding: 8px;
         object-fit: contain;
+        border-radius: 20px;
     }
 
     /* force text to stack above images even if large-screen layout used row-reverse */
@@ -350,5 +351,13 @@ section {
 
     .food .food-image {
         order: 1;
+    }
+
+    .food .scroll-container img {
+        height: 100%;
+        max-height: 360px;
+        width: auto;
+        padding: 8px;
+        object-fit: contain;
     }
 }
