@@ -364,5 +364,6 @@ section {
         width: auto;
         padding: 8px;
         object-fit: contain;
+        border-radius: 20px;
     }
 }
