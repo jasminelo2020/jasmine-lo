@@ -140,6 +140,19 @@ section {
     }
 }
 
+.download-resume-button {
+    /* background-color: #f7cee2; button color */
+    /* border: none; */
+    border-color: #f7cee2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* center the button */
+    display: block;
+    margin: 0 auto;
+}
+
 /* PROJECTS PAGE */
 
 .projects {
