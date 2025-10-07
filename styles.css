@@ -140,17 +140,21 @@ section {
     }
 }
 
+#resume .resume-pdf-link {
+    text-align: center;
+}
+
 .download-resume-button {
     /* background-color: #f7cee2; button color */
     /* border: none; */
     border-color: #f7cee2;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px 10px;
     cursor: pointer;
     margin-top: 10px;
     /* center the button */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 /* PROJECTS PAGE */
