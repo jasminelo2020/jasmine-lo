@@ -153,8 +153,12 @@ section {
     cursor: pointer;
     margin-top: 10px;
     /* center the button */
-    display: block;
-    margin: 0 auto
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /* below centers the button but makes whole horizontal area clickable */
+    /* display: inline-block; */
+    /* margin: 0 auto; */
 }
 
 /* PROJECTS PAGE */
