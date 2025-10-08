@@ -17,6 +17,21 @@
 
     gtag('config', 'G-324SWH5JK3');
     </script>
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 <body>
     
@@ -26,6 +41,22 @@
         <section id="fashion">
             <h2>fashion</h2>
         </section>
+
+        <div class ="vision-boards">
+            <div id="outfit-board" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+            <div id="jasmine" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+        </div>
+        <br>
+        <div id="clothes" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+            
+            <img id="item1" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+            <img id="item2" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+            <img id="item3" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+            <img id="item4" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+            <img id="item5" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+            <img id="item6" src="../images/website-icon.png" draggable="true" ondragstart="dragstartHandler(event)" height="69">
+
+        </div>
 
     </main>
 
