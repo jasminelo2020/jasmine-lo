@@ -434,15 +434,23 @@ section {
     cursor: grabbing;
 }
 
+/* dynamic font sizing for mobile */
+@media (width < 800px) {
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+    }
+}
+
 /* stack as columns only for very skinny screens */
 @media (width < 600px) {
     .vision-board {
         flex-direction: column;
     }
-}
 
-/* dynamic font sizing for mobile */
-@media (width < 800px) {
     h2 {
         font-size: 1.5rem;
     }
