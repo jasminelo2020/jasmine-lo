@@ -510,9 +510,9 @@ section {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media (orientation: portrait){
     .photo {
-        height: 30%;
+        height: 40%;
         width: auto;
         /* translate: -50% 0; */
         /* transform: scale(0.8) translate(calc(10% - 10vw), calc(10% - 10vh)); */
