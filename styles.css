@@ -400,7 +400,8 @@ section {
 }
 
 .clothes-column {
-    border: 1px solid pink;
+    border: 1px solid rgb(244, 207, 213);
+    background-color: #f7cee211;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
@@ -467,4 +468,41 @@ section {
 
 #dragged-item {
     opacity: 0.2;
+}
+
+/* FRIENDS PAGE */
+
+#photo-section {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 207, 213);
+    background-color: #f7cee211;
+    width: 100%;
+    /* height: 100vh; */
+    height:calc(100vh - 80px - 30px); 
+    top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.photo {
+    position: absolute;
+    /* width: 100px; */
+    /* height: auto; */
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.2s;
+    user-select: none;
+}
+
+.dragging {
+    cursor: grabbing;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }

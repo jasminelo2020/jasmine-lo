@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click-to-Drag Photo Section</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f9f9f9;
+      overflow: hidden;
+    }
+
+    /* Wrapper section */
+    #photo-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    .photo {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: grab;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: box-shadow 0.2s;
+      user-select: none;
+    }
+
+    .dragging {
+      cursor: grabbing;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="photo-section">
+    <img src="https://picsum.photos/200/200?random=1" class="photo" style="top: 50px; left: 50px;">
+    <img src="https://picsum.photos/200/200?random=2" class="photo" style="top: 250px; left: 300px;">
+    <img src="https://picsum.photos/200/200?random=3" class="photo" style="top: 150px; left: 600px;">
+  </div>
+
+  <script>
+    const section = document.getElementById('photo-section');
+    const photos = section.querySelectorAll('.photo');
+    let activePhoto = null;
+    let offsetX = 0, offsetY = 0;
+    let topZ = 1; // track stacking order
+
+    photos.forEach(photo => {
+      photo.addEventListener('click', e => {
+        if (activePhoto === photo) {
+          // Drop
+          activePhoto.classList.remove('dragging');
+          activePhoto.style.zIndex = ++topZ;
+          activePhoto = null;
+          document.removeEventListener('mousemove', movePhoto);
+        } else {
+          // Pick up
+          if (activePhoto) {
+            activePhoto.classList.remove('dragging');
+            document.removeEventListener('mousemove', movePhoto);
+          }
+          activePhoto = photo;
+          activePhoto.classList.add('dragging');
+          offsetX = e.clientX - photo.offsetLeft;
+          offsetY = e.clientY - photo.offsetTop;
+          document.addEventListener('mousemove', movePhoto);
+        }
+      });
+    });
+
+    function movePhoto(e) {
+      if (!activePhoto) return;
+      const rect = section.getBoundingClientRect();
+      activePhoto.style.left = (e.clientX - rect.left - offsetX) + 'px';
+      activePhoto.style.top = (e.clientY - rect.top - offsetY) + 'px';
+    }
+  </script>
+</body>
+</html>
