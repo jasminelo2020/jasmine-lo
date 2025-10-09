@@ -9,13 +9,13 @@ photos.forEach(photo => {
     const rect = section.getBoundingClientRect(); // container boundaries
 
     if (activePhoto === photo) {
-        // Drop
+        // drop
         activePhoto.classList.remove('dragging');
         activePhoto.style.zIndex = ++topZ;
         activePhoto = null;
         document.removeEventListener('mousemove', movePhoto);
     } else {
-        // Pick up
+        // pick up
         if (activePhoto) {
         activePhoto.classList.remove('dragging');
         document.removeEventListener('mousemove', movePhoto);
