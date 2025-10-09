@@ -510,7 +510,7 @@ section {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-@media (width < 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     .photo {
         height: 30%;
         width: auto;
