@@ -517,3 +517,22 @@ section {
     /* transform: scale(0.8) translate(calc(10% - 10vw), calc(10% - 10vh)); */
   }
 }
+
+/* CONTACT PAGE */
+
+#contact .contact-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.contact-method a img {
+  width: 30px;
+  height: auto;
+  float: left;
+  margin: 10px 10px;
+  align-items: center;
+  justify-content: center;
+}
