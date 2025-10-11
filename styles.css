@@ -40,7 +40,7 @@ section {
   padding: 20px;
 }
 
-#contact ul {
+/* #contact ul {
   list-style: none;
   display: table;
   margin: 0 auto;
@@ -54,7 +54,7 @@ section {
   display: table-cell;
   text-align: right;
   padding-right: 0.25em;
-}
+} */
 
 /* INTERESTS COVER PAGE */
 
@@ -535,4 +535,17 @@ section {
   margin: 10px 10px;
   align-items: center;
   justify-content: center;
+}
+
+#contact ul {
+  list-style: none;
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#contact li {
+  display: table-row;
+  text-align: center;
+  font-size: 12px;
 }
